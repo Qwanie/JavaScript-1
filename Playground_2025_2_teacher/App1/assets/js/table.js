@@ -9,7 +9,12 @@ for (let index = 0; index < 10; index++) {
     pets.push({name: seeder.petName, age: randomNumber(0,20) });
 }
 
-pets.forEach(pet => console.log(`${pet.name} is ${pet.age} years old.`));
 
 let table = document.querySelector(".TableContainer");
-let i = 0;
+for (const pet of pets) {
+
+    let div = document.createElement("div");
+    div.innerText = pet.name;
+    div.classList.add("TableItem");
+    table.appendChild(div);
+}
