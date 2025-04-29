@@ -10,21 +10,11 @@ for (let index = 0; index < 10; index++) {
 }
 
 
-
-for (const pet of pets) {
-    console.log(`${pet.name} is ${pet.age} years old.`);
-}
-
-
 let table = document.querySelector(".TableContainer");
+for (const pet of pets) {
 
-let div = document.createElement("div");
-div.innerText = "pizza";
-div.classList.add("TableItem");
-table.appendChild(div);
-
-
-
-
-
-let i = 0;
+    let div = document.createElement("div");
+    div.innerText = pet.name;
+    div.classList.add("TableItem");
+    table.appendChild(div);
+}
