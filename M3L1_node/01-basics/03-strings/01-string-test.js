@@ -89,45 +89,45 @@ if (typeof numberTest === 'number' && !Number.isNaN(numberTest)) {
 }
 
 
-function myFunc(myParam) {
+function myFunc1(myParam) {
+  
+  //myParam1 should be a non-empty string
+  if (!(typeof myParam === 'string' && myParam.length > 0)) {
 
-  if (typeof myParam !== 'string') {
     console.log("\nwrong type - cannot run the algorithm");
     return;
   }
 
-  if (myParam.length !== 0) {
-    //Non empty string - do the algorithm
     console.log("\nNon empty string - do the algorithm");
-  }
-  else {
-    //if the string is empty, set some default values and do the algorithm
-    console.log("\nempty string, set some default values and do the algorithm");
-  }
 }
 
-myFunc("Martin");
-myFunc("");
-myFunc(5);
-myFunc(0);
+myFunc1("Martin");
+myFunc1("");
+myFunc1(5);
+myFunc1(0);
 
 
-function myFuncCorrectParamTest(myParam1, myParam2) {
+function myFunc2(myParam1, myParam2) {
 
-  if (typeof myParam1 !== 'string' || stringTest.length === 0) {
-    console.log("Wrong parameter"); 
+  //myParam1 should be a non-empty string
+  //myParam2 should be a valid number
+
+  if (!(typeof myParam1 === 'string' && myParam1.length > 0)) {
+    console.log("myParam1 is a wrong parameter"); 
     return;
   }
-  if (typeof myParam2 === 'number' && !Number.isNaN(myParam2)) {
-    console.log("Wrong parameter"); 
+  if (!(typeof myParam2 === 'number' && !Number.isNaN(myParam2))) {
+    console.log("my Param2 is a wrong parameter"); 
     return;
   }
 
-  //myParam1 is a non-empty string and myParam2 is a valid number
+  console.log("myParam1 is a non-empty string and myParam2 is a valid number");
 
 }
 
-
+myFunc2(5, 5);
+myFunc2("5", 5);
+myFunc2("5", NaN);
 
 
 /* Exercises
