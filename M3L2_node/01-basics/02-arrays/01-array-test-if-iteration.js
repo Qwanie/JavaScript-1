@@ -10,7 +10,7 @@ for (const item of a) {
    console.log(item, typeof item, Array.isArray(item));
 }
 
-if (Array.isArray(browserNames)) {
+if (Array.isArray(browserNames && browserNames.length > 0)) {
   // We end up here, because browserNames is a valid array.
   console.log('browserNames is an array');
 }

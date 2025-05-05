@@ -41,7 +41,7 @@ console.log(anwer);
 const ex2 = 'Lorem3 ipsum 45 dolor sit amet, 5consectetur adipisicing_99 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'+ 
 'Ut enim ad minim ven3iam, quis nostrud exercitation ull_88_amco laboris nisi ut aliquip ex ea com36modo 183 consequat.'
 
-const matchesEx2 = ex2.matchAll(/\d/g);
+const matchesEx2 = ex2.matchAll(/\d+/g);
 let i = 0;
 for (const match of matchesEx2) {
   console.log(`at ${match.index} we found ${match[0]}`);
