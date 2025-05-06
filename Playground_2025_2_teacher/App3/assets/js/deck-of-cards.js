@@ -39,7 +39,7 @@ export function deckOfCards () {
             let numeralOrder = 2;
             for (const n of numeral) {
 
-                let cardimage = sprite(s,n);
+                let cardimage = sprite(suitOrder,numeralOrder);
 
                 let card = Object.create(prototypeCard,
                     {

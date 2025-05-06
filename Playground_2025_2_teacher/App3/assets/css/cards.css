@@ -8,8 +8,8 @@
                        "Knight", "Queen", "King", "Ace"];
 
     */
-      --cardTopOffset:-140px;
-      --cardRow:0;			   
+      --cardTopOffset:-200px;
+      --cardRow:7;			   
       --cardCol:5;
   }
 
