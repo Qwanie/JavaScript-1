@@ -72,7 +72,11 @@
 
       <script type="module" src="./assets/js/deck-of-cards.js"></script>
 
-      <script>
+      <script type="module">
+
+        import { deckOfCards } from './assets/js/deck-of-cards.js';
+        import { prototypeCard } from './assets/js/playing-card.js';
+
         /* offsets
         let top_offset = ["-135px", "-150px", "-170px", "-200px"];
         let suits = ["Clubs", "Spades", "Diamonds", "Hearts"];
@@ -87,9 +91,14 @@
 
         const card = document.querySelector(".PlayingCard");
         card.setAttribute(
-        'style',
-        `background-position: top ${spriteTop}px left ${spriteLeft}px`
-        );
+          'style',
+          `background-position: top ${spriteTop}px left ${spriteLeft}px`
+          );
+
+        const deck = new deckOfCards();
+        deck.freshDeck();
+
+        console.log(deck.cards)
 
       </script>
 
