@@ -6,8 +6,8 @@ const o = {name:"Martin", color:"blue"};
 const {name, color} = o;
 
 // Using the destructuring syntax
-const stateValues = [459, 144, o, 96, 34, 0, 14];
-const [arizona, missouri, idaho, nebraska, texas, minnesota] = stateValues;
+
+const [arizona, missouri, idaho, nebraska, texas, minnesota] = [459, 144, o, 96, 34, 0, 14];
 console.log(missouri); // 144
 
 

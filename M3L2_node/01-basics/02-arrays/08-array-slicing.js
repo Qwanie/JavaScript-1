@@ -5,10 +5,6 @@ const animals = ['elephant', 'tiger', 'emu', 'zebra', 'cat', 'dog', 'rabbit', 'e
 console.log(`Original array: ${animals}`);
 
 
-let pagesize = 2
-let pageNr = 4
-let page = animals.slice(pageNr * pagesize, pageNr * pagesize + pagesize);
-
 // Copy by position
 // Get the chunk from index 4 to index 7.
 const domestic = animals.slice(4, 7);
@@ -21,9 +17,19 @@ const secondHalf = animals.slice(4, animals.length);
 const extraAnimals = [...firstHalf, 'platypus', ...secondHalf];
 console.log(`Extra: ${extraAnimals}`);
 
+
 // Copy by filter criteria
 const animalsE = animals.filter(animal => animal[0].toLowerCase() === 'e');
 console.log(`E letter: ${animalsE}`);
+
+
+
+let pagesize = 2
+let pageNr = 2
+let page = animals.slice(pageNr * pagesize, pageNr * pagesize + pagesize);
+
+console.log(...page);
+
 
 /* Exercise
 1. use the ...operator and array.slice to create a new deck of cards which contains

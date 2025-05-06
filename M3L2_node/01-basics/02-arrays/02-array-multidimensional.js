@@ -34,6 +34,18 @@ books.forEach((book) => {
 });
 console.groupEnd
 
+
+const bookd_dc = JSON.parse(JSON.stringify(books));
+if (JSON.stringify(books) === JSON.stringify(bookd_dc))
+{
+  console.log("Equals");
+}
+else
+{
+  console.log("Not Equal");
+}
+
+
 //Exercise
 //1. iterate over the two-dimensional array using array.prototype.forEach
 //2. Create a tree dimensional array (think rubriks cube) and iterate over each element using for..of
