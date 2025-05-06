@@ -36,8 +36,8 @@ console.groupEnd();
 console.group('Alternative I want to use OOP principles and encapulate the functions inta a prototype');
 //First create the prtottyep object and assign the functions I want to share
 let cardProto = {
-    cardColor: function () {    //note, no parameter
-        switch (this.suit) {    //note, I use this
+    cardColor: function () {
+        switch (this.suit) {
             case 'Heart':
             case 'Diamond': return 'red';
         }

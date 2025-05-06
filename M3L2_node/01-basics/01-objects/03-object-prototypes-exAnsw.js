@@ -97,6 +97,7 @@ console.group(`Exercises`)
 const _address = {country: `Sweden`};
 const _friend1 = Object.create(_address);
 const _friend2 = Object.create(_address);
+
 _friend1.name = `Sam`;
 _friend2.name = `Frodo`;
 
@@ -122,11 +123,13 @@ console.log(_friend1.toString());
 console.log(''+_friend2);
 
 _address.isEqual = function (obj) {return this.country === obj.country};
+
+console.log(_friend1.isEqual(_friend2));
 _friend2.country = _friend1.country;
 console.log(_friend1.isEqual(_friend2));
 
 _address.isEqual = function (obj) {return this.country === obj.country && this.name === obj.name};
-//_friend2.name = _friend1.name;
+_friend2.name = _friend1.name;
 console.log(_friend1.isEqual(_friend2));
 
 console.groupEnd();
