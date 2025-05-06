@@ -14,17 +14,32 @@
     <link href="./assets/css/table-layout.css"rel="stylesheet">
 
     <link href="./assets/css/index.css"rel="stylesheet">
-    <link href="./assets/css/table.css"rel="stylesheet">
+    <link href="./assets/css/images.css"rel="stylesheet">
+    <link href="./assets/css/cards.css"rel="stylesheet">
+
 
     <title>Hello, world!</title>
   </head>
   <body>
     <div class="GridPage">
 			<div class="GridItemMain">
-        <div class="TableContainer">
-        </div>
-        <button id="btnPrev">Prev</button>
-        <button id="btnNext">Next</button>
+        <div class="ImgAlbum">
+          <div class="ImgItem">
+            <div class="PlayingCard"></div>
+          </div>
+          <div class="ImgItem">
+            <div class="PlayingCard"></div>
+          </div>
+          <div class="ImgItem">
+            <div class="PlayingCard"></div>
+          </div>
+          <div class="ImgItem">
+            <div class="PlayingCard"></div>
+          </div>
+          <div class="ImgItem">
+            <div class="PlayingCard"></div>
+          </div>
+        </div> 
       </div>
 
 			<div class="GridItemSideBarLeft">
@@ -33,6 +48,7 @@
           <a href="./about.html" class="MenuItem">About</a>
           <a href="./table.html" class="MenuItem">Table</a>
           <a href="./images.html" class="MenuItem">Images</a>
+          <a href="./cards.html" class="MenuItem">Cards</a>
           <a href="./register.html" class="LastMenuItem">Register</a>
         </div>
     </div>
@@ -42,6 +58,7 @@
         <a href="./index.html" class="MenuItem">Home</a>
         <a href="./about.html" class="MenuItem">About</a>
         <a href="./table.html" class="MenuItem">Table</a>
+        <a href="./cards.html" class="MenuItem">Cards</a>
         <a href="./images.html" class="MenuItem">Images</a>
         <a href="./register.html" class="LastMenuItem">Register</a>
       </div>
@@ -49,8 +66,32 @@
     <div class="GridItemFooter">I am content in the Footer.</div>
 		</div>
 
+
       <!-- Bootstrap Javascript -->
       <script src="../bootstrap/js/bootstrap.bundle.js"></script>
-      <script type="module" src="./assets/js/table.js"></script>
+
+      <script type="module" src="./assets/js/deck-of-cards.js"></script>
+
+      <script>
+        /* offsets
+        let top_offset = ["-135px", "-150px", "-170px", "-200px"];
+        let suits = ["Clubs", "Spades", "Diamonds", "Hearts"];
+        let numeral = ["Two", "Three", "Four", "Five", 
+                       "Six", "Seven", "Eight", "Nine", "Ten",
+                       "Knight", "Queen", "King", "Ace"];
+
+        */
+        const [cardRow, cardCol, cardTopOffset] = [3,4, -150];
+        const spriteTop =  cardTopOffset - cardRow*110 - cardRow*228;
+        const spriteLeft = -165 - cardCol*110 - cardCol*162;
+
+        const card = document.querySelector(".PlayingCard");
+        card.setAttribute(
+        'style',
+        `background-position: top ${spriteTop}px left ${spriteLeft}px`
+        );
+
+      </script>
+
   </body>
 </html>

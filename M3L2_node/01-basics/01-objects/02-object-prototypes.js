@@ -6,6 +6,7 @@ import {seedGenerator, uniqueId, randomNumber, deepCopy, isEqual} from '../../..
 let _proto = {prop1: "val1"};
 let o1 = Object.create(_proto);
 console.log(o1);
+console.log(o1.prop1);
 
 //an prop with same name as prototype prop will take precedence
 _proto.prop1 = "new prot value";
@@ -15,6 +16,8 @@ o1.prop1 = "o1 prop1";
 o1.prop2 = "o1 prop2";
 console.log(o1.prop1);
 console.log(o1.prop2);
+
+console.log(Object.getPrototypeOf(o1).prop1);
 
 //deleting object prop brings back prototype prop
 delete o1.prop1;
@@ -108,6 +111,6 @@ console.groupEnd();
     - Set _friend2.country to "Finland". What country do Sam and Frodo live in?
 
 4. assign to _address.toString a function that presents the friend with name and country
-5. assign to _address.isEqual(obj) a function that returns true if this and obj lives in the same country
-6. modify to _address.isEqual(obj) so it returns true if this and obj lives in the same country and has same name
+5. assign to _address.isEqual = function (obj) a function that returns true if this and obj lives in the same country
+6. modify to _address.isEqual = function (obj) so it returns true if this and obj lives in the same country and has same name
 */
