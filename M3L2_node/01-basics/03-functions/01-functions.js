@@ -1,14 +1,14 @@
 'use strict';
 import {seedGenerator, uniqueId, randomNumber, deepCopy, isEqual} from '../../../SeidoHelpers/seido-helpers.js';
 
-console.group('Standard function')
+console.log('Standard function')
 function createFriend(_seeder)
 {
     const f = {name: _seeder.fullName};
     return f;
 }
 
-console.group('Function expression');
+console.log('Function expression');
 const createAnotherFriend = function (_seeder)
 {
     const f = {};
@@ -16,9 +16,10 @@ const createAnotherFriend = function (_seeder)
     return f;
 }
 
+console.log('Function delegate');
 const createYetAnotherFriend = createAnotherFriend;
 
-console.group('Arrow function')
+console.log('Arrow function')
 const createYetYetAnotherFriend = (_seeder) => {
     const f = {};
     f.name = _seeder.fullName;
