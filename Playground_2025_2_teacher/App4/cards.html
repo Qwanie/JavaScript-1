@@ -24,21 +24,6 @@
     <div class="GridPage">
 			<div class="GridItemMain">
         <div class="ImgAlbum">
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
-          </div>
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
-          </div>
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
-          </div>
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
-          </div>
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
-          </div>
         </div> 
       </div>
 
@@ -71,36 +56,7 @@
       <script src="../bootstrap/js/bootstrap.bundle.js"></script>
 
       <script type="module" src="./assets/js/deck-of-cards.js"></script>
-
-      <script type="module">
-
-        import { deckOfCards } from './assets/js/deck-of-cards.js';
-        import { prototypeCard } from './assets/js/playing-card.js';
-
-        /* offsets
-        let top_offset = ["-135px", "-150px", "-170px", "-200px"];
-        let suits = ["Clubs", "Spades", "Diamonds", "Hearts"];
-        let numeral = ["Two", "Three", "Four", "Five", 
-                       "Six", "Seven", "Eight", "Nine", "Ten",
-                       "Knight", "Queen", "King", "Ace"];
-
-        */
-        const [cardRow, cardCol, cardTopOffset] = [3,4, -150];
-        const spriteTop =  cardTopOffset - cardRow*110 - cardRow*228;
-        const spriteLeft = -165 - cardCol*110 - cardCol*162;
-
-        const card = document.querySelector(".PlayingCard");
-        card.setAttribute(
-          'style',
-          `background-position: top ${spriteTop}px left ${spriteLeft}px`
-          );
-
-        const deck = new deckOfCards();
-        deck.freshDeck();
-
-        console.log(deck.cards)
-
-      </script>
+      <script type="module" src="./assets/js/cards.js"></script>
 
   </body>
 </html>
