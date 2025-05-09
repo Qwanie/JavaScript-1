@@ -10,7 +10,7 @@ import { prototypeCard } from './playing-card.js';
 
 export function deckOfCards () {
 
-    const top_offset = ["-135px", "-150px", "-170px", "-200px"];
+    const top_offset = ["-135", "-150", "-170", "-200"];
 
     const suits = ["Clubs", "Spades", "Diamonds", "Hearts"];
     const numeral = ["Two", "Three", "Four", "Five", "Six", 
