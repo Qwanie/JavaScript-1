@@ -29,5 +29,5 @@ for (const pet of pets) {
     imgItem.classList.add("ImgItem");
     imgItem.appendChild(div1);
     imgItem.appendChild(p);
-    album.append(imgItem);
+    album.appendChild(imgItem);
 }

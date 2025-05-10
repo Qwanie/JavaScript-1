@@ -15,8 +15,6 @@
 
     <link href="./assets/css/index.css"rel="stylesheet">
     <link href="./assets/css/images.css"rel="stylesheet">
-    <link href="./assets/css/cards.css"rel="stylesheet">
-
 
     <title>Hello, world!</title>
   </head>
@@ -25,19 +23,39 @@
 			<div class="GridItemMain">
         <div class="ImgAlbum">
           <div class="ImgItem">
-            <div class="PlayingCard"></div>
+              <div><img src="../img/img1.png"></div>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Nisl tincidunt eget nullam non.
+              </p>
           </div>
           <div class="ImgItem">
-            <div class="PlayingCard"></div>
+              <div><img src="../img/img2.png"></div>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Nisl tincidunt eget nullam non.
+              </p>
           </div>
           <div class="ImgItem">
-            <div class="PlayingCard"></div>
+              <div><img src="../img/img3.png"></div>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Nisl tincidunt eget nullam non.
+              </p>
           </div>
           <div class="ImgItem">
-            <div class="PlayingCard"></div>
+              <div><img src="../img/img4.png"></div>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Nisl tincidunt eget nullam non.
+              </p>
           </div>
           <div class="ImgItem">
-            <div class="PlayingCard"></div>
+              <div><img src="../img/img5.png"></div>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Nisl tincidunt eget nullam non.
+              </p>
           </div>
         </div> 
       </div>
@@ -69,38 +87,5 @@
 
       <!-- Bootstrap Javascript -->
       <script src="../bootstrap/js/bootstrap.bundle.js"></script>
-
-      <script type="module" src="./assets/js/deck-of-cards.js"></script>
-
-      <script type="module">
-
-        import { deckOfCards } from './assets/js/deck-of-cards.js';
-        import { prototypeCard } from './assets/js/playing-card.js';
-
-        /* offsets
-        let top_offset = ["-135px", "-150px", "-170px", "-200px"];
-        let suits = ["Clubs", "Spades", "Diamonds", "Hearts"];
-        let numeral = ["Two", "Three", "Four", "Five", 
-                       "Six", "Seven", "Eight", "Nine", "Ten",
-                       "Knight", "Queen", "King", "Ace"];
-
-        */
-        const [cardRow, cardCol, cardTopOffset] = [3,4, -150];
-        const spriteTop =  cardTopOffset - cardRow*110 - cardRow*228;
-        const spriteLeft = -165 - cardCol*110 - cardCol*162;
-
-        const card = document.querySelector(".PlayingCard");
-        card.setAttribute(
-          'style',
-          `background-position: top ${spriteTop}px left ${spriteLeft}px`
-          );
-
-        const deck = new deckOfCards();
-        deck.freshDeck();
-
-        console.log(deck.cards)
-
-      </script>
-
   </body>
 </html>

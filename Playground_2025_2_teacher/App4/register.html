@@ -14,32 +14,58 @@
     <link href="./assets/css/table-layout.css"rel="stylesheet">
 
     <link href="./assets/css/index.css"rel="stylesheet">
-    <link href="./assets/css/images.css"rel="stylesheet">
-    <link href="./assets/css/cards.css"rel="stylesheet">
-
+    <link href="./assets/css/register.css"rel="stylesheet">
 
     <title>Hello, world!</title>
   </head>
   <body>
     <div class="GridPage">
 			<div class="GridItemMain">
-        <div class="ImgAlbum">
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
+        <form class="formContainer" id="register" method="post">
+          <div class="formIntroContainer">
+            <div>
+              <h1>Register yourselves</h1>
+            </div>
+            Note: an asterisk (*) indicates a required field
           </div>
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
+
+          <div class="formContentContainer">
+            <fieldset>
+              <legend>Your name</legend>
+        
+              <div class="formInputContainer">
+                <input id="fname" name="fname" type="text" placeholder="John" required />
+                <label for="fname">First name</label>
+              </div>
+              <div class="formInputContainer">
+                <input id="lname" name="lname" type="text" placeholder="Doe" required />
+                <label for="lname">Last name</label>
+              </div>
+              <div class="formInputContainer">
+                <input id="email" name="email" type="email" placeholder="john.doe@gmail.com" required />
+                <label for="yearPublished">Email</label>
+              </div>
+            </fieldset>
+        
+            <fieldset>
+              <legend>Your address</legend>
+              <div class="formInputContainer">
+                <input id="street" name="street" type="text" placeholder="Main Street 34" />
+                <label for="street">Street address</label>
+              </div>
+              <div class="formInputContainer">
+                <input id="zip" name="zip" type="text" placeholder="112 11" />
+                <label for="zip">ZipCode</label>
+              </div>
+              <div class="formInputContainer">
+                <input id="city" name="city" type="text" placeholder="Stockholm" />
+                <label for="city">City</label>
+              </div>
+            </fieldset>
           </div>
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
-          </div>
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
-          </div>
-          <div class="ImgItem">
-            <div class="PlayingCard"></div>
-          </div>
-        </div> 
+      
+          <button type="submit">Register</button>
+        </form>
       </div>
 
 			<div class="GridItemSideBarLeft">
@@ -69,38 +95,5 @@
 
       <!-- Bootstrap Javascript -->
       <script src="../bootstrap/js/bootstrap.bundle.js"></script>
-
-      <script type="module" src="./assets/js/deck-of-cards.js"></script>
-
-      <script type="module">
-
-        import { deckOfCards } from './assets/js/deck-of-cards.js';
-        import { prototypeCard } from './assets/js/playing-card.js';
-
-        /* offsets
-        let top_offset = ["-135px", "-150px", "-170px", "-200px"];
-        let suits = ["Clubs", "Spades", "Diamonds", "Hearts"];
-        let numeral = ["Two", "Three", "Four", "Five", 
-                       "Six", "Seven", "Eight", "Nine", "Ten",
-                       "Knight", "Queen", "King", "Ace"];
-
-        */
-        const [cardRow, cardCol, cardTopOffset] = [3,4, -150];
-        const spriteTop =  cardTopOffset - cardRow*110 - cardRow*228;
-        const spriteLeft = -165 - cardCol*110 - cardCol*162;
-
-        const card = document.querySelector(".PlayingCard");
-        card.setAttribute(
-          'style',
-          `background-position: top ${spriteTop}px left ${spriteLeft}px`
-          );
-
-        const deck = new deckOfCards();
-        deck.freshDeck();
-
-        console.log(deck.cards)
-
-      </script>
-
   </body>
 </html>
